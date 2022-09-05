@@ -23,9 +23,9 @@ You can install this module with
 
 ## Bank Queries
 - `query_balances(address)` _queries the balance of all coins for a single account_
-- `query_balances_by_udenom(address, udenom)` _queries the balance of a single coin for a single account._
+- `query_balances_by_denom(address, denom)` _queries the balance of a single coin for a single account._
 - `query_supply()` _queries the total supply of all coins._
-- `query_supply_by_udenom(udenom)` _queries the supply of a single coin._
+- `query_supply_by_denom(denom)` _queries the supply of a single coin._
 
 ## Distribution Queries
 - `query_community_pool()` _queries the community pool coins_
@@ -91,10 +91,10 @@ You can install this module with
 ```python
 from pycosmicwrap import CosmicWrap
 
-# create an object with rest api url, rpc url and udenom as arguments
+# create an object with rest api url, rpc url and denom as arguments
 chihuahua = CosmicWrap(lcd='https://api.chihuahua.wtf',
                        rpc='https://rpc.chihuahua.wtf',
-                       udenom='uhuahua')
+                       denom='uhuahua')
 
 # Once the module is imported and the object is created we can start using
 # the object to interact with the blockchain

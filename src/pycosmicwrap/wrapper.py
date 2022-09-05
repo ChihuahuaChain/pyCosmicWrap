@@ -20,10 +20,10 @@ import requests
 
 
 class CosmicWrap:
-    def __init__(self, lcd: str, rpc: str, udenom: str):
+    def __init__(self, lcd: str, rpc: str, denom: str):
         self.lcd = lcd
         self.rpc = rpc
-        self.udenom = udenom
+        self.denom = denom
 
     # queries the balance of all coins for a single account.
     def query_balances(self, address: str):
@@ -42,11 +42,11 @@ class CosmicWrap:
         except Exception:
             raise Exception
 
-    # queries the balance of a given udenom for a single account.
-    def query_balances_by_udenom(self, address, udenom):
+    # queries the balance of a given denom for a single account.
+    def query_balances_by_denom(self, address, denom):
         endpoint = '/cosmos/bank/v1beta1/balances/'
         try:
-            return json.loads(requests.get(self.lcd + endpoint + address + '/by_denom?denom=' + udenom).content)
+            return json.loads(requests.get(self.lcd + endpoint + address + '/by_denom?denom=' + denom).content)
         except Exception:
             raise Exception
 
@@ -58,12 +58,12 @@ class CosmicWrap:
         except Exception:
             raise Exception
 
-    # queries the total supply of a given udenom.
-    def query_supply_by_udenom(self, udenom):
-        udenom = self.udenom if udenom is None else udenom
+    # queries the total supply of a given denom.
+    def query_supply_by_denom(self, denom):
+        denom = self.denom if denom is None else denom
         endpoint = '/cosmos/bank/v1beta1/supply/'
         try:
-            return json.loads(requests.get(self.lcd + endpoint + udenom).content)
+            return json.loads(requests.get(self.lcd + endpoint + denom).content)
         except Exception:
             raise Exception
 
