@@ -379,3 +379,115 @@ class CosmicWrap:
             return responses
         except Exception:
             raise Exception
+
+    # queries params of the mint module.
+    def query_mint_params(self):
+        endpoint = '/cosmos/mint/v1beta1/params'
+        try:
+            return json.loads(requests.get(self.lcd + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries inflation.
+    def query_inflation(self):
+        endpoint = '/cosmos/mint/v1beta1/inflation'
+        try:
+            return json.loads(requests.get(self.lcd + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries annual provisions.
+    def query_annual_provisions(self):
+        endpoint = '/cosmos/mint/v1beta1/annual_provisions'
+        try:
+            return json.loads(requests.get(self.lcd + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries a given transaction hash
+    def query_tx(self, tx):
+        endpoint = '/cosmos/tx/v1beta1/txs/'
+        try:
+            return json.loads(requests.get(self.lcd + endpoint + tx).content)
+        except Exception:
+            raise Exception
+
+    # queries abci info.
+    def query_abci_info(self):
+        endpoint = '/abci_info?'
+        try:
+            return json.loads(requests.get(self.rpc + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries block by height.
+    def query_block(self, height):
+        endpoint = '/block?height='
+        try:
+            return json.loads(requests.get(self.rpc + endpoint + str(height)).content)
+        except Exception:
+            raise Exception
+
+    # queries block results by height.
+    def query_block_results(self, height):
+        endpoint = '/block_results?height='
+        try:
+            return json.loads(requests.get(self.rpc + endpoint + str(height)).content)
+        except Exception:
+            raise Exception
+
+    # queries a commit.
+    def query_commit(self, height):
+        endpoint = '/commit?height='
+        try:
+            return json.loads(requests.get(self.rpc + endpoint + height).content)
+        except Exception:
+            raise Exception
+
+    # queries consensus state.
+    def query_consensus_state(self):
+        endpoint = '/consensus_state?'
+        try:
+            return json.loads(requests.get(self.rpc + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries dump consensus state.
+    def query_dump_consensus_state(self):
+        endpoint = '/dump_consensus_state?'
+        try:
+            return json.loads(requests.get(self.rpc + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries genesis.
+    def query_genesis(self):
+        endpoint = '/genesis?'
+        try:
+            return json.loads(requests.get(self.rpc + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries network info.
+    def query_net_info(self):
+        endpoint = '/net_info?'
+        try:
+            return json.loads(requests.get(self.rpc + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries the number of unconfirmed transactions.
+    def query_num_unconfirmed_txs(self):
+        endpoint = '/num_unconfirmed_txs?'
+        try:
+            return json.loads(requests.get(self.rpc + endpoint).content)
+        except Exception:
+            raise Exception
+
+    # queries the node status.
+    def query_status(self):
+        endpoint = '/status?'
+        try:
+            return json.loads(requests.get(self.rpc + endpoint).content)
+        except Exception:
+            raise Exception

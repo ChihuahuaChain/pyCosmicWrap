@@ -4,7 +4,7 @@ build-backend = 'hatchling.build'
 
 [project]
 name = 'pyCosmicWrap'
-version = '0.1'
+version = '0.1.2'
 description = 'pyCosmicWrap is a Cosmos API/RPC python Wrapper by ChihuahuaChain'
 authors = [
     { name = 'ChihuahuaChain', email = 'woof@huahua.wtf' },
@@ -26,4 +26,4 @@ dynamic = []
 'Bug Tracker' = 'https://github.com/ChihuahuaChain/pyCosmicWrap/issues'
 
 [tool.hatch.build.targets.wheel]
-packages = ['src/pyCosmicWrap']
+packages = ['src/pycosmicwrap']
