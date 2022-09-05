@@ -89,7 +89,7 @@ You can install this module with
 
 #### Initialize the module and print basic info
 ```python
-from pyCosmicWrap import CosmicWrap
+from pycosmicwrap import CosmicWrap
 
 # create an object with rest api url, rpc url and udenom as arguments
 chihuahua = CosmicWrap(lcd='https://api.chihuahua.wtf',
