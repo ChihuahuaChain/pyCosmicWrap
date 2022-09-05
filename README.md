@@ -9,16 +9,17 @@ It currently has been tested with ChihuahuaChain and the first stable release wi
 There's a lot more to add, here's our plan, feel free to contribute with code improvements, testing and feel free to push a PR to help us to improve pyCosmicWrap and to make it the default choice for any Cosmos Ecosystem python developer. The next big step will be adding [Mospy by ctrl-Felix](https://github.com/ctrl-Felix/mospy) in order to be able to create and broadcast transactions as well.
 
 - [x] Wrap main default API endpoints
-- [ ] Wrap main RPC endpoints
+- [x] Wrap main RPC endpoints
+- [x] Published on [PyPi](https://pypi.org/project/pyCosmicWrap/) 
 - [ ] Add Osmosis specific endpoints
-- [ ] Publish on PyPi
 - [ ] Integrate [Mospy by ctrl-Felix](https://github.com/ctrl-Felix/mospy)
 
 ## Installation
 
 You can install this module with
-`python -m pip install pyCosmicWrap`
+`python -m pip install pycosmicwrap`
 
+# API/LCD Queries
 
 ## Bank Queries
 - `query_balances(address)` _queries the balance of all coins for a single account_
@@ -60,6 +61,29 @@ You can install this module with
 - `query_delegators_by_address(validator, delegator)` _queries a given delegator's data for a given validator_
 - `query_validator_unbonding_by_address)` _queries a given delegator's unbonding data for a given validator_
 - `query_unbonding_from(validator)` _queries all the unbonding of a give validator_
+
+## Mint Queries
+- `query_mint_params()` _queries mint parameters_
+- `query_annual_provisions()` _queries annual provisions_
+- `query_mint_params()` _queries current inflation percentage_
+
+## TX Queries
+- `query_tx(tx_hash)` _queries a given transaction hash_
+
+# RPC Queries
+
+- `query_abci_info()` _queries abci info_
+- `query_block(height)` _queries a given block height_
+- `query_block_results(height)` _queries a given block results by its height_
+- `query_commit(height)` _queries a given commit by its height_
+- `query_consensus_state()` _queries consensus state_
+- `query_dump_consensus_state()` _dumps consensus state_
+- `query_genesis()` _queries the current genesis_
+- `query_net_info()` _queries network info_
+- `query_num_unconfirmed_txs()` _queries the amount of unconfirmed txs_
+- `query_status()` _queries the node status._
+
+
 
 # Examples
 
