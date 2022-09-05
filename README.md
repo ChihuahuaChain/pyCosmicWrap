@@ -97,7 +97,7 @@ print(chihuahua.query_rewards(my_address))
 
 
 # Donate
-We don't seek for donations, but you can say Thank You for our work by [delegating to our validators](https://delegate.chihuahua.wtf) and by [sharing this project on Twitter](https://twitter.com/intent/tweet?text=Check%20out%20%23pyCosmosWrap%20%F0%9F%8C%AF%20by%20%40ChihuahuaChain%20-%20A%20%23python%20wrapper%20for%20%40cosmos%20on%20https%3A//github.com/ChihuahuaChain/pyCosmicWrap%20%23HUAHUA%20%23Chihuahua%20%23WOOF%0A)
+We don't seek for donations, but you can say Thank You for our work by [delegating to our validators](https://delegate.chihuahua.wtf) and by [sharing this project on Twitter](https://twitter.com/intent/tweet?text=Check%20out%20%23pyCosmicWrap%20%F0%9F%8C%AF%20by%20%40ChihuahuaChain%20-%20A%20%23python%20wrapper%20for%20%40cosmos%20on%20https%3A//github.com/ChihuahuaChain/pyCosmicWrap%20%23HUAHUA%20%23Chihuahua%20%23WOOF%0A)
 
 # License
 ChihuahuaChain/pyCosmicWrap is licensed under the [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
