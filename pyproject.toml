@@ -1,0 +1,29 @@
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
+
+[project]
+name = 'pyCosmicWrap'
+version = '0.1'
+description = 'pyCosmicWrap is a Cosmos API/RPC python Wrapper by ChihuahuaChain'
+authors = [
+    { name = 'ChihuahuaChain', email = 'woof@huahua.wtf' },
+]
+requires-python = '>=3.7'
+
+readme = 'README.md'
+keywords = ['chihuahua', 'cosmos', 'chihuahuachain', 'wrapper', 'pycosmicwrap', 'cosmosecosystem']
+license = { text='GNU General Public License v3.0' }
+
+dependencies = [
+'requests~=2.25.1'
+]
+
+dynamic = []
+
+[project.urls]
+'Homepage' = 'https://github.com/ChihuahuaChain/pyCosmicWrap'
+'Bug Tracker' = 'https://github.com/ChihuahuaChain/pyCosmicWrap/issues'
+
+[tool.hatch.build.targets.wheel]
+packages = ['src/pyCosmicWrap']
