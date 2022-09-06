@@ -103,7 +103,7 @@ chihuahua = CosmicWrap(lcd='https://api.chihuahua.wtf',
 my_address = 'chihuahua1z6rfp8wzsx87pwt3z73gf2a67d6tgmfrrlzy7p'
 
 # Let's create a variable with your balance
-my_address_balance = chihuahua.query_balance(my_address)
+my_address_balance = chihuahua.query_balances(my_address)
 
 # or just print it out
 print(my_address_balance)
